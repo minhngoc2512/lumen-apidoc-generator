@@ -21,7 +21,7 @@
         "ramsey/uuid": "^3.0",
         "mnapoli/front-yaml": "^1.5",
         "mnapoli/silly": "~1.0",
-        "illuminate/view": "5.*",
+        "illuminate/view": "5.*"
     },
     "require-dev": {
         "orchestra/testbench": "~3.0",

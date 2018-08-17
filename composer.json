@@ -1,5 +1,5 @@
 {
-    "name": "minhngoc/lumen-apidoc-generator",
+    "name": "minhngoc/lumen-apidoc-generator-minhngoc",
     "license": "MIT",
     "description": "Generate beautiful API documentation using Dingo router from your Lumen application",
     "keywords": [
@@ -45,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Davmixcool\\ApiDoc\\ApiDocGeneratorServiceProvider"
+                "Oxycoder\\ApiDoc\\ApiDocGeneratorServiceProvider"
             ]
        }
     }

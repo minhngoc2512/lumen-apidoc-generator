@@ -31,15 +31,15 @@
     },
     "autoload": {
         "files": [
-            "src/Davmixcool/ApiDoc/Documentarian/helpers.php"
+            "src/Oxycoder/ApiDoc/Documentarian/helpers.php"
         ],
         "psr-0": {
-            "Davmixcool\\ApiDoc": "src/"
+            "Oxycoder\\ApiDoc": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Davmixcool\\ApiDoc\\Tests\\": "tests/"
+            "Oxycoder\\ApiDoc\\Tests\\": "tests/"
         }
     },
     "extra": {

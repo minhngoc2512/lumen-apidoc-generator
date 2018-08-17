@@ -1,13 +1,13 @@
 <?php
 
-namespace Oxycoder\ApiDoc\Tests;
+namespace MinhNgoc\ApiDoc\Tests;
 
 use Mockery as m;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Translation\Translator;
 use Illuminate\Translation\LoaderInterface;
-use Oxycoder\ApiDoc\Parsers\RuleDescriptionParser;
-use Oxycoder\ApiDoc\ApiDocGeneratorServiceProvider;
+use MinhNgoc\ApiDoc\Parsers\RuleDescriptionParser;
+use MinhNgoc\ApiDoc\ApiDocGeneratorServiceProvider;
 
 class RuleDescriptionParserTest extends TestCase
 {

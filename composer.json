@@ -31,21 +31,21 @@
     },
     "autoload": {
         "files": [
-            "src/Oxycoder/ApiDoc/Documentarian/helpers.php"
+            "src/MinhNgoc/ApiDoc/Documentarian/helpers.php"
         ],
         "psr-0": {
-            "Oxycoder\\ApiDoc": "src/"
+            "MinhNgoc\\ApiDoc": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Oxycoder\\ApiDoc\\Tests\\": "tests/"
+            "MinhNgoc\\ApiDoc\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Oxycoder\\ApiDoc\\ApiDocGeneratorServiceProvider"
+                "MinhNgoc\\ApiDoc\\ApiDocGeneratorServiceProvider"
             ]
        }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Oxycoder\ApiDoc\Tests\Fixtures;
+namespace MinhNgoc\ApiDoc\Tests\Fixtures;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

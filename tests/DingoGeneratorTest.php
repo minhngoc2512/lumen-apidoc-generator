@@ -1,14 +1,14 @@
 <?php
 
-namespace Oxycoder\ApiDoc\Tests;
+namespace MinhNgoc\ApiDoc\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Oxycoder\ApiDoc\Generators\DingoGenerator;
+use MinhNgoc\ApiDoc\Generators\DingoGenerator;
 use Dingo\Api\Provider\LaravelServiceProvider;
-use Oxycoder\ApiDoc\Tests\Fixtures\TestRequest;
-use Oxycoder\ApiDoc\Tests\Fixtures\TestController;
-use Oxycoder\ApiDoc\ApiDocGeneratorServiceProvider;
-use Oxycoder\ApiDoc\Tests\Fixtures\DingoTestController;
+use MinhNgoc\ApiDoc\Tests\Fixtures\TestRequest;
+use MinhNgoc\ApiDoc\Tests\Fixtures\TestController;
+use MinhNgoc\ApiDoc\ApiDocGeneratorServiceProvider;
+use MinhNgoc\ApiDoc\Tests\Fixtures\DingoTestController;
 
 class DingoGeneratorTest extends TestCase
 {

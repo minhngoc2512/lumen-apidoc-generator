@@ -1,6 +1,6 @@
 <?php
 
-namespace Oxycoder\ApiDoc\Tests\Fixtures;
+namespace MinhNgoc\ApiDoc\Tests\Fixtures;
 
 use Illuminate\Foundation\Http\FormRequest;
 

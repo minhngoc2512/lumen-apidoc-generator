@@ -17,8 +17,7 @@ Require this package with composer. In file composer.json add 2 packages:
 
 
 ```sh
-   "minhngoc/lumen-apidoc-generator": "dev-master",
-   "dingo/api": "2.0.0-alpha1"
+   "minhngoc/lumen-apidoc-generator": "dev-master"
 ```
 After run command update package:
 

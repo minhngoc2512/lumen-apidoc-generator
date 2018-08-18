@@ -1,4 +1,4 @@
-;
+setupLanguages;
 /*
  Copyright 2016 Marcel Pociot
  Copyright 2008-2013 Concur Technologies, Inc.

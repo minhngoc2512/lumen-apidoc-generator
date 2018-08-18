@@ -22,7 +22,7 @@
         "mnapoli/front-yaml": "^1.5",
         "mnapoli/silly": "~1.0",
         "illuminate/view": "5.*",
-        "dingo/api": "2.0.0-alpha1",
+        "dingo/api": "2.0.0-alpha1"
     },
     "require-dev": {
         "orchestra/testbench": "~3.0",

@@ -1,6 +1,6 @@
 ## Lumen API Documentation Generator
 
-Automatically generate your API documentation using Dingo router in your Lumen app. Take a look at the [example documentation](http://marcelpociot.de/whiteboard/).
+Automatically generate your API documentation using [Dingo router](https://github.com/dingo/api.wiki.git) in your Lumen app. Take a look at the [example documentation](http://marcelpociot.de/whiteboard/).
 
 
 `php artisan api:generate --router="dingo" --routePrefix="v1"`
@@ -13,17 +13,26 @@ Automatically generate your API documentation using Dingo router in your Lumen a
 
 ## Installation
 
-Require this package with composer using the following command:
+Require this package with composer. In file composer.json add 2 packages:
 
 
 ```sh
-$ composer require davmixcool/lumen-apidoc-generator
+   "minhngoc/lumen-apidoc-generator": "dev-master",
+   "dingo/api": "2.0.0-alpha1"
+```
+After run command update package:
+
+```sh
+   $ composer update
 ```
 
 Go to your `bootstrap/app.php` and register the service provider:
 
 ```php
-$app->register(Davmixcool\ApiDoc\ApiDocGeneratorServiceProvider::class);
+$app->instance('path.config', app()->basePath() . DIRECTORY_SEPARATOR . 'config');
+$app->instance('path.storage', app()->basePath() . DIRECTORY_SEPARATOR . 'storage');
+$app->register(Dingo\Api\Provider\LumenServiceProvider::class);
+$app->register(Minhngoc\ApiDoc\ApiDocGeneratorServiceProvider::class);
 ```
 
 

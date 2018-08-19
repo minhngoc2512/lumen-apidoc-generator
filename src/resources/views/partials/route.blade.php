@@ -38,6 +38,48 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
+```python
+import requests
+import json
+
+
+@if(strtolower($parsedRoute['methods'][0]) == "get")
+result = requests.{{strtolower($parsedRoute['methods'][0])}}('{{config('app.docs_url') ?: config('app.url')}}/{{$parsedRoute['uri']}}')
+print(json.dumps(result,indent=4))
+@else
+result = requests.{{strtolower($parsedRoute['methods'][0])}}('{{config('app.docs_url') ?: config('app.url')}}/{{$parsedRoute['uri']}}', {{json_encode($parsedRoute['parameters'])}})
+print(json.dumps(result,indent=4))
+@endif
+@if(count($parsedRoute['parameters'])) \
+@foreach($parsedRoute['parameters'] as $attribute => $parameter)
+    -d "{{$attribute}}"="{{$parameter['value']}}" \
+@endforeach
+@endif
+
+```
+
+```php
+@php
+$url_restful = config('app.docs_url') ?: config('app.url');
+$url_restful .= "/" . $parsedRoute['uri'];
+$url_restful = '
+<?php
+$ch = curl_init("' . $url_restful .  '");
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_' . $parsedRoute['methods'][0] . ', true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+curl_close($ch);
+echo $output;
+?>
+';
+@endphp
+{!!
+$url_restful
+!!}
+
+```
+
 @if(in_array('GET',$parsedRoute['methods']) || (isset($parsedRoute['showresponse']) && $parsedRoute['showresponse']))
 > Example response:
 

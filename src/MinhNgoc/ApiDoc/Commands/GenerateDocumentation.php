@@ -62,6 +62,12 @@ class GenerateDocumentation extends Command
      */
     public function handle()
     {
+        $status_folder = is_dir(base_path().'/public/docs');
+        if($status_folder){
+            exec('(cd '.base_path().'/public/ && rm -rf docs -R)');
+            $this->warn('Deleted folder `docs`!');
+        }
+        
         if ($this->option('router') === 'laravel') {
             $generator = new LaravelGenerator();
         } else {

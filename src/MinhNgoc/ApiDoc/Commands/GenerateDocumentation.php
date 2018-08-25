@@ -62,6 +62,11 @@ class GenerateDocumentation extends Command
      */
     public function handle()
     {
+        if(strpos($this->option('output'),'public/')===false){
+            $this->error("Can't create document in folder ".$this->option('output'));
+            $this->warn("Name folder must begin with `public`!!!");
+            return false;
+        }
         $status_folder = is_dir(base_path().'/public/docs');
         if($status_folder){
             exec('(cd '.base_path().'/public/ && rm -rf docs -R)');

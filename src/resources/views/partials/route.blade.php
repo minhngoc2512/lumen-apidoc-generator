@@ -7,7 +7,7 @@
 {!! $parsedRoute['description'] !!}
 @endif
 
-> Example request: {{$parsedRoute['methods'][0]}} "{{config('app.docs_url') ?: config('app.url')}}
+> Example request: {{$parsedRoute['methods'][0]}} "{{config('app.docs_url') ?: config('app.url')}}/{{$parsedRoute['uri']}}
 
 ```bash
 curl -X {{$parsedRoute['methods'][0]}} "{{config('app.docs_url') ?: config('app.url')}}/{{$parsedRoute['uri']}}" \

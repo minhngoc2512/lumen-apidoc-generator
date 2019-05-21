@@ -378,6 +378,9 @@ abstract class AbstractGenerator
      */
     protected function parseRule($rule, $ruleName, &$attributeData, $seed)
     {
+        if (gettype($rule) != 'string') {
+            return;
+        }
         $faker = Factory::create();
         $faker->seed(crc32($seed));
 
